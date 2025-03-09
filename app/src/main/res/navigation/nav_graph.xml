@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/allPlacesFragment">
+
+    <!-- First Fragment -->
+    <fragment
+        android:id="@+id/allPlacesFragment"
+        android:name="com.locationsource.devstree.ui.dashboard.navigation.places.PlacesFragment"
+        android:label="fragment_all_places"
+        tools:layout="@layout/fragment_all_places">
+        <action
+            android:id="@+id/action_allPlacesFragment_to_addPlacesFragment"
+            app:destination="@id/addPlacesFragment" />
+        <action
+            android:id="@+id/action_allPlacesFragment_to_mapRouteFragment"
+            app:destination="@id/mapRouteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPlacesFragment"
+        android:name="com.locationsource.devstree.ui.dashboard.navigation.addPlace.AddPlacesFragment"
+        android:label="fragment_add_places"
+        tools:layout="@layout/fragment_add_places" >
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument
+            android:name="lng"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapRouteFragment"
+        android:name="com.locationsource.devstree.ui.dashboard.navigation.mapRoute.MapRouteFragment"
+        android:label="fragment_map_route"
+        tools:layout="@layout/fragment_map_route" />
+
+
+</navigation>
