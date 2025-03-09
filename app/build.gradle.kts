@@ -55,9 +55,8 @@ dependencies {
     //Hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.common)
-    implementation(libs.play.services.maps)
     implementation(libs.places)
-
+    ksp(libs.androidx.hilt.compiler)
     kapt(libs.hilt.android.compiler)
 
     //Room DB
@@ -72,21 +71,16 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.fragment.ktx)
 
-    implementation(libs.kotlinx.serialization.json)
-    // When using Kotlin.
-    ksp(libs.androidx.hilt.compiler)
+    //Map
+    implementation(libs.play.services.maps)
+    implementation(libs.easyroutes)
 
     // Navigation Component
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
-
-    //Retrofit
-    implementation(libs.retrofit)
-
-    implementation("com.github.AntonioHReyes:EasyRoutes:1.0.10")
-
+    
 }
 
 kapt {
